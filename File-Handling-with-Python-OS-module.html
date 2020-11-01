@@ -1,0 +1,100 @@
+<!-- STUDENT NAME: ALTUGHAN OZENGI
+REGEX PYTHON DJANGO COURSE
+BLOG ASSIGNMENT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Altughan Ozengi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__menu">
+                <ul>
+                    <li><a href="index.html">BLOG OF ALTUGHAN OZENGI</a></li>
+                    <li>Assignment in terms of Regex Python Django Course</li>
+                </ul>
+            </div>
+        </header>
+        <section class="content">
+            <article class="content__article">
+                <div class="article__header">
+                    <h1>File Handling with Python & OS module</h1>
+                </div>
+                <div class="article__intro">
+                    <h2>Printing the Current Working Directory</h2>
+                    <p>In order to get the current working directory, you need to use os.getcwd():</p>
+                    <pre>
+                        import os
+
+                        # print the current directory
+                        print("The current directory:", os.getcwd())
+                    </pre>
+                    <p>os.getcwd() returns a unicode string representing the current working directory:
+                    </p>
+                    <pre>
+                        The current directory: C:\pythoncode-tutorials\python-standard-library
+                    </pre>
+                </div>
+                <div class="article__intro">
+                    <h2>Creating Directories</h2>
+                    <p>To make a folder/directory in any operating system, all we need to do is:</p>
+                    <pre>
+                        # make an empty directory (folder)
+                        os.mkdir("folder")
+                    </pre>
+                    <p>Once you execute this, it'll immediately spawn a directory named "folder" in the current working directory.</p>
+                </div>
+                <div class="article__intro">
+                    <h2>Changing Directories</h2>
+                    <p>It is fairly easy to change directories, let's change to the folder we just created:</p>
+                    <pre>
+                        # changing the current directory to 'folder'
+                        os.chdir("folder")
+                    </pre>
+                </div>
+                <div class="article__intro">
+                    <h2>Creating Files</h2>
+                    <p>In order to create files in Python, you don't need any module, you can use the built-in function open() which takes the filename you want to create as the first parameter and the mode you want to open the file with as a second parameter:</p>
+                    <pre>
+                        # create a new text file
+                        text_file = open("text.txt", "w")
+                        # write to this file some text
+                        text_file.write("This is a text file")
+                    </pre>
+                </div>
+                <div class="article__intro">
+                    <h2>Renaming Files</h2>
+                    <p>It's pretty easy to rename a file using os module, let's rename the file we justed created:</p>
+                    <pre>
+                        # rename text.txt to renamed-text.txt
+                        os.rename("text.txt", "renamed-text.txt")                        
+                    </pre>
+                </div>
+                <div class="article__intro">
+                    <h2>Moving Files</h2>
+                    <p>We can use os.replace() function to move files or directories.</p>
+                    <pre>
+                        # replace (move) this file to another directory
+                        os.replace("renamed-text.txt", "folder/renamed-text.txt")                      
+                    </pre>
+                </div>
+                <div class="article__intro">
+                    <h2>Deleting Files</h2>
+                    <p>Let's remove that file we created.</p>
+                    <pre>
+                        # delete that file
+                        os.remove("folder/renamed-text.txt")
+                    </pre>
+                </div>
+                <div class="article__readMore">
+                    <a href="index.html">Go back...</a>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
